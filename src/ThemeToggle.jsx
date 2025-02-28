@@ -1,21 +1,13 @@
-import React from 'react';
-import { useTheme } from './ThemeContext';
+import React from "react";
+import { useTheme } from "./ThemeContext";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 const ThemeToggle = () => {
-  const { toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <button onClick={toggleTheme} style={{
-      position: 'fixed',
-      top: '20px',
-      right: '20px',
-      padding: '10px',
-      fontSize: '16px',
-      borderRadius: '5px',
-      cursor: 'pointer',
-      border: '2px solid #ccc' // Ensure the button is visible in both themes
-    }}>
-      Toggle Theme
+    <button onClick={toggleTheme} className="theme-toggle">
+      {theme === "light" ? <FaMoon /> : <FaSun />}
     </button>
   );
 };

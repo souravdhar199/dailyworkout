@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { CgGym, CgMonday } from 'react-icons/cg';
 import { FaPlayCircle, FaDumbbell } from 'react-icons/fa'; // Importing additional icons for enhanced design
+import { GiBatteryMinus } from 'react-icons/gi';
 
 const convertToEmbed = (url) => {
   const urlObj = new URL(url);
@@ -18,7 +20,7 @@ const WorkoutTable = ({ workoutsGroup = [] }) => {
     <div>
       {workoutsGroup.map((workouts, groupIndex) => (
         <div key={groupIndex} className="container">
-          <h1><FaDumbbell /> Workout Plan {groupIndex + 1}</h1>
+          <h1><GiBatteryMinus /> Workout Plan {groupIndex + 1}</h1>
           <div className="table-container">
             <table>
               <thead>

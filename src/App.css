@@ -51,12 +51,17 @@ h1 {
 .table-container {
   overflow-x: auto;
   background: var(--table-bg);
+
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   color: var(--text-color);
+  
+}
+body.dark .theme-toggle {
+  border: 2px solid #FFD700; /* Yellow border */
 }
 
 th, td {
@@ -121,21 +126,31 @@ tr:hover {
 }
 
 /* Theme Toggle Button */
+/* Theme Toggle Button */
 .theme-toggle {
   position: fixed;
   top: 20px;
   right: 20px;
-  padding: 10px 15px;
-  font-size: 16px;
-  border-radius: 5px;
+  background-color: var(--button);
+  color: var(--text);
   border: none;
-  background-color: var(--button-bg);
-  color: var(--button-text);
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
 }
 
+
 .theme-toggle:hover {
-  background-color: var(--accent-color);
-  color: var(--background-color);
+  background-color: var(--accent);
+  color: var(--background);
 }
+
