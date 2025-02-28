@@ -1,9 +1,10 @@
 const workoutsData = [
-    // Table 1
-    [
+  {
+    title: "Monday",
+    workouts: [
       {
         name: "Hammer Machine Chest Press",
-        video: "https://www.youtube.com/watch?v=0Wa9CfRXUkA&ab_channel=RenaissancePeriodization",
+        video: "https://www.youtube.com/watch?v=0Wa9CfRXUkA",
         reps: "4x8",
       },
       {
@@ -12,8 +13,10 @@ const workoutsData = [
         reps: "4x8",
       },
     ],
-    // Table 2
-    [
+  },
+  {
+    title: "Tuesday",
+    workouts: [
       {
         name: "Overhead Tricep Extensions",
         video: "https://www.youtube.com/watch?v=overhead-tricep-extensions",
@@ -24,17 +27,18 @@ const workoutsData = [
         video: "https://www.youtube.com/watch?v=lateral-dumbbell-raises",
         reps: "5x10-20",
       },
-     
     ],
-    // Table 3
-    [
+  },
+  {
+    title: "WednesDay",
+    workouts: [
       {
         name: "Tricep Pushdown",
         video: "https://www.youtube.com/watch?v=tricep-pushdown",
         reps: "3x10-15",
       },
-    ]
-  ];
-  
-  export default workoutsData;
-  
+    ],
+  },
+];
+
+export default workoutsData;

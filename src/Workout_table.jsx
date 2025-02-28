@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { CgGym, CgMonday } from 'react-icons/cg';
-import { FaPlayCircle, FaDumbbell } from 'react-icons/fa'; // Importing additional icons for enhanced design
-import { GiBatteryMinus } from 'react-icons/gi';
+import { FaPlayCircle } from 'react-icons/fa';
+import workoutsData from './Data';
 
 const convertToEmbed = (url) => {
   const urlObj = new URL(url);
@@ -9,18 +8,15 @@ const convertToEmbed = (url) => {
   return `https://www.youtube.com/embed/${videoId}`;
 };
 
-const WorkoutTable = ({ workoutsGroup = [] }) => {
+const WorkoutTable = () => {
   const [videoUrl, setVideoUrl] = useState(null);
-
-  if (!workoutsGroup.length) {
-    return <p>No workouts data available.</p>;
-  }
 
   return (
     <div>
-      {workoutsGroup.map((workouts, groupIndex) => (
-        <div key={groupIndex} className="container">
-          <h1><GiBatteryMinus /> Workout Plan {groupIndex + 1}</h1>
+      {workoutsData.map((workoutPlan, index) => (
+        <div key={index} className="container">
+          {/* Dynamic Title from JSON */}
+          <h1>{workoutPlan.title}</h1>
           <div className="table-container">
             <table>
               <thead>
@@ -31,8 +27,8 @@ const WorkoutTable = ({ workoutsGroup = [] }) => {
                 </tr>
               </thead>
               <tbody>
-                {workouts.map((workout, index) => (
-                  <tr key={index}>
+                {workoutPlan.workouts.map((workout, idx) => (
+                  <tr key={idx}>
                     <td>{workout.name}</td>
                     <td>
                       <button
