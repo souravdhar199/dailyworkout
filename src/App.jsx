@@ -1,13 +1,18 @@
 import React from 'react';
 import './App.css';
+import { ThemeProvider } from './ThemeContext';
+import ThemeToggle from './ThemeToggle';
 import WorkoutTable from './Workout_table';
 import workoutsData from './Data';
 
 function App() {
   return (
-    <div>
-      <WorkoutTable workoutsGroup={workoutsData} />
-    </div>
+    <ThemeProvider>
+      <ThemeToggle />
+      <div>
+        <WorkoutTable workoutsGroup={workoutsData} />
+      </div>
+    </ThemeProvider>
   );
 }
 
