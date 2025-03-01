@@ -11,41 +11,47 @@ const convertToEmbed = (url) => {
 const WorkoutTable = () => {
   const [videoUrl, setVideoUrl] = useState(null);
 
+  const dayOfWeek = new Date().toLocaleString('en-us', { weekday: 'long' }).toLowerCase(); // Normalize day to lowercase
+  const todayWorkout = workoutsData.find(workout => workout.title.toLowerCase() === dayOfWeek);
+
+  // First check if there is a workout for today and if it's a rest day
+  if (!todayWorkout || todayWorkout.restDay) {
+    return <div>No Workout Today</div>;
+  }
+
+  // Since we have verified that it's not a rest day and data exists, we can safely map over workouts
   return (
     <div>
-      {workoutsData.map((workoutPlan, index) => (
-        <div key={index} className="container">
-          {/* Dynamic Title from JSON */}
-          <h1>{workoutPlan.title}</h1>
-          <div className="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Workout Name</th>
-                  <th>Video</th>
-                  <th>Reps</th>
+      <div className="container">
+        <h1>{todayWorkout.title} Workout</h1>
+        <div className="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Workout Name</th>
+                <th>Video</th>
+                <th>Reps</th>
+              </tr>
+            </thead>
+            <tbody>
+              {todayWorkout.workouts.map((workout, idx) => (
+                <tr key={idx}>
+                  <td>{workout.name}</td>
+                  <td>
+                    <button
+                      onClick={() => setVideoUrl(convertToEmbed(workout.video))}
+                      className="video-button"
+                    >
+                      <FaPlayCircle size={30} />
+                    </button>
+                  </td>
+                  <td>{workout.reps}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {workoutPlan.workouts.map((workout, idx) => (
-                  <tr key={idx}>
-                    <td>{workout.name}</td>
-                    <td>
-                      <button
-                        onClick={() => setVideoUrl(convertToEmbed(workout.video))}
-                        className="video-button"
-                      >
-                        <FaPlayCircle size={30} />
-                      </button>
-                    </td>
-                    <td>{workout.reps}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+              ))}
+            </tbody>
+          </table>
         </div>
-      ))}
+      </div>
       {videoUrl && (
         <div className="modal">
           <div className="modal-content">

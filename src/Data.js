@@ -1,18 +1,8 @@
 const workoutsData = [
   {
     title: "Monday",
-    workouts: [
-      {
-        name: "Hammer Machine Chest Press",
-        video: "https://www.youtube.com/watch?v=0Wa9CfRXUkA",
-        reps: "4x8",
-      },
-      {
-        name: "Flat Machine Chest Press",
-        video: "https://www.youtube.com/watch?v=flat-machine-chest-press",
-        reps: "4x8",
-      },
-    ],
+    restDay: true,
+    workouts: []
   },
   {
     title: "Tuesday",
@@ -30,15 +20,66 @@ const workoutsData = [
     ],
   },
   {
-    title: "WednesDay",
+    title: "Wednesday",
     workouts: [
       {
         name: "Tricep Pushdown",
         video: "https://www.youtube.com/watch?v=tricep-pushdown",
         reps: "3x10-15",
-      },
+      }
     ],
   },
+  {
+    title: "Thursday",
+    restDay: true,
+    workouts: []
+  },
+  {
+    title: "Friday",
+    workouts: [
+      {
+        name: "Bicep Curls",
+        video: "https://www.youtube.com/watch?v=bicep-curls",
+        reps: "4x10",
+      },
+      {
+        name: "Hammer Curls",
+        video: "https://www.youtube.com/watch?v=hammer-curls",
+        reps: "4x10",
+      }
+    ],
+  },
+  {
+    title: "Saturday",
+    restDay: false,
+    workouts: [
+      {
+        name: "Leg Press",
+        video: "https://www.youtube.com/watch?v=leg-press",
+        reps: "4x12",
+      },
+      {
+        name: "Squat",
+        video: "https://www.youtube.com/watch?v=squat",
+        reps: "5x5",
+      },
+      {
+        name: "Leg Press",
+        video: "https://www.youtube.com/watch?v=leg-press",
+        reps: "4x12",
+      },
+      {
+        name: "Squat",
+        video: "https://www.youtube.com/watch?v=squat",
+        reps: "5x5",
+      }
+    ],
+  },
+  {
+    title: "Sunday",
+    restDay: true,
+    workouts: []
+  }
 ];
 
 export default workoutsData;
