@@ -1,8 +1,21 @@
-# React + Vite
+# Workout Table Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React application designed to display daily workout routines. It dynamically shows workouts for the current day of the week, utilizing responsive web design to ensure a great user experience on all devices, including mobiles, tablets, and desktops.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Daily Workouts**: Displays only the workout planned for the current day.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop viewing.
+- **Video Integration**: Includes links to workout videos.
+- **Dark Mode**: Supports a toggleable dark mode theme.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+What things you need to install the software and how to install them:
+
+```bash
+node.js - Download and install Node.js from [Node.js official website](https://nodejs.org/)
