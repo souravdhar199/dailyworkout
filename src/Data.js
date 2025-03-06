@@ -1,52 +1,152 @@
 const workoutsData = [
   {
     title: "Monday",
-    restDay: true,
-    workouts: []
+    workouts: [
+      {
+        "name": "Machine Chest Press",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Hammer Strength Incline Press",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Lateral Raises",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Tricep Pushdown",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Cardio",
+        "video": "",
+        "reps": "10 min"
+      }
+      
+    ],
   },
   {
     title: "Tuesday",
     workouts: [
       {
-        name: "Overhead Tricep Extensions",
-        video: "https://www.youtube.com/watch?v=overhead-tricep-extensions",
-        reps: "3x10-15",
+        "name": "Leg Press",
+        "video": "",
+        "reps": "4x10-15"
       },
       {
-        name: "Lateral Dumbbell Raises",
-        video: "https://www.youtube.com/watch?v=lateral-dumbbell-raises",
-        reps: "5x10-20",
+        "name": "Hamstring curl",
+        "video": "",
+        "reps": "4x10-15"
       },
+      {
+        "name": "Shoulder Press",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Abdominal Crunch",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Cardio",
+        "video": "",
+        "reps": "10 min"
+      }
+     
     ],
   },
   {
     title: "Wednesday",
     workouts: [
       {
-        name: "Tricep Pushdown",
-        video: "https://www.youtube.com/watch?v=tricep-pushdown",
-        reps: "3x10-15",
+        "name": "Vertical Pull",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Horizontal Pull",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Biceps Curl",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Cardio",
+        "video": "",
+        "reps": "10 min"
       }
+      
     ],
   },
   {
     title: "Thursday",
-    restDay: true,
-    workouts: []
+    restDay: false,
+    workouts: [
+      {
+        "name": "Leg Press",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Hamstring curl",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Shoulder Press",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Abdominal Crunch",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Cardio",
+        "video": "",
+        "reps": "10 min"
+      }
+    ],
   },
   {
     title: "Friday",
     workouts: [
       {
-        name: "Bicep Curls",
-        video: "https://www.youtube.com/watch?v=bicep-curls",
-        reps: "4x10",
+        "name": "Machine Chest Press",
+        "video": "",
+        "reps": "4x10-15"
       },
       {
-        name: "Hammer Curls",
-        video: "https://www.youtube.com/watch?v=hammer-curls",
-        reps: "4x10",
+        "name": "Hammer Strength Incline Press",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Lateral Raises",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Tricep Pushdown",
+        "video": "",
+        "reps": "4x10-15"
+      },
+      {
+        "name": "Cardio",
+        "video": "",
+        "reps": "10 min"
       }
+      
     ],
   },
   {
@@ -54,25 +154,26 @@ const workoutsData = [
     restDay: false,
     workouts: [
       {
-        name: "Leg Press",
-        video: "https://www.youtube.com/watch?v=leg-press",
-        reps: "4x12",
+        "name": "Vertical Pull",
+        "video": "",
+        "reps": "4x10-15"
       },
       {
-        name: "Squat",
-        video: "https://www.youtube.com/watch?v=squat",
-        reps: "5x5",
+        "name": "Horizontal Pull",
+        "video": "",
+        "reps": "4x10-15"
       },
       {
-        name: "Leg Press",
-        video: "https://www.youtube.com/watch?v=leg-press",
-        reps: "4x12",
+        "name": "Biceps Curl",
+        "video": "",
+        "reps": "4x10-15"
       },
       {
-        name: "Squat",
-        video: "https://www.youtube.com/watch?v=squat",
-        reps: "5x5",
+        "name": "Cardio",
+        "video": "",
+        "reps": "10 min"
       }
+      
     ],
   },
   {
